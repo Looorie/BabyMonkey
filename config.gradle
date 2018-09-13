@@ -1,0 +1,4 @@
+ext{
+    modulePersonal = false
+    moduleWallet = false
+}

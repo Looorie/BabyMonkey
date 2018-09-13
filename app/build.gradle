@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "me.looorielovbb.babymonkey"
+        minSdkVersion 15
+        //noinspection OldTargetApi
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+    buildTypes {
+        debug{
+            buildConfigField "String", "BASE_URL", "\"https://www.gank.io\""
+        }
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://www.gank.io\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
+
+    implementation "com.android.support:appcompat-v7:27.1.1"
+    implementation "com.android.support:cardview-v7:27.1.1"
+    implementation "com.android.support:design:27.1.1"
+    implementation "com.android.support:recyclerview-v7:27.1.1"
+    implementation "com.android.support:support-v4:27.1.1"
+//
+//    androidTestImplementation "com.android.support:support-annotations:27.0.1"
+//    androidTestImplementation "com.android.support:support-v4:27.0.1"
+//    androidTestImplementation "com.android.support:recyclerview-v7:27.0.1"
+//    androidTestImplementation "com.android.support:appcompat-v7:27.0.1"
+//    androidTestImplementation "com.android.support:design:27.0.1"
+    implementation 'com.google.android.gms:play-services-plus:15.0.1'
+    testImplementation 'junit:junit:4.12'
+
+    // Dagger dependencies
+    annotationProcessor "com.google.dagger:dagger-compiler:2.16"
+    implementation "com.google.dagger:dagger:2.16"
+    implementation "com.google.dagger:dagger-android:2.16"
+    implementation "com.google.dagger:dagger-android-support:2.16"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.16"
+
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    androidTestImplementation "android.arch.persistence.room:testing:1.1.1"
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
+
+    implementation "com.squareup.okhttp3:okhttp:3.11.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
+
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+
+
+
+
+}
