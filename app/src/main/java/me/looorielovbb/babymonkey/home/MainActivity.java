@@ -2,6 +2,9 @@ package me.looorielovbb.babymonkey.home;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -9,7 +12,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import me.looorielovbb.babymonkey.BaseActivity;
 import me.looorielovbb.babymonkey.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends BaseActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener,

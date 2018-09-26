@@ -3,7 +3,6 @@ package me.looorielovbb.babymonkey.network;
 import io.reactivex.Observable;
 import me.looorielovbb.babymonkey.data.bean.BaseResponse;
 import me.looorielovbb.babymonkey.data.bean.Resource;
-import retrofit2.http.*;
 
 public interface Api {
     String BASE_URL = "https://gank.io/";
@@ -73,6 +72,6 @@ public interface Api {
     //获取闲读数据
     @GET("api/xiandu/data/id/{id}/count/{count}/page/{page}")
     Observable<BaseResponse<Resource>> getXianduData(@Path("id") String id,
-                                              @Path("count") int count,
-                                              @Path("page") int page);
+                                                     @Path("count") int count,
+                                                     @Path("page") int page);
 }

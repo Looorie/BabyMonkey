@@ -7,12 +7,10 @@ import dagger.Provides;
 import retrofit2.Retrofit;
 
 @Module
-public class ApiModule
-{
+public class ApiModule {
     @Singleton
     @Provides
-    public Api provideApi(Retrofit retrofit)
-    {
+    public Api provideApi(Retrofit retrofit) {
         return retrofit.create(Api.class);
     }
 }

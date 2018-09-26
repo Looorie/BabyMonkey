@@ -10,12 +10,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 @Module
-public class OkhttpClientModule
-{
+public class OkhttpClientModule {
     @Provides
     @Singleton
-    public static OkHttpClient provide()
-    {
+    public static OkHttpClient provide() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         return new OkHttpClient.Builder()
