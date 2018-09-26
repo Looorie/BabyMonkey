@@ -1,14 +1,17 @@
 package me.looorielovbb.babymonkey.home;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import me.looorielovbb.babymonkey.BaseActivity;
 import me.looorielovbb.babymonkey.R;
 
@@ -18,7 +21,7 @@ public class MainActivity extends BaseActivity implements
 {
 
     ViewPager viewpager;
-    BottomNavigationView naviview;
+    BottomNavigationView navigationView;
     Fragment[] fragments = new Fragment[2];
 
     FragmentPagerAdapter mFragmentPagerAdapter;
@@ -30,9 +33,9 @@ public class MainActivity extends BaseActivity implements
         setContentView(R.layout.activity_main);
 
         viewpager = findViewById(R.id.viewpager);
-        naviview = findViewById(R.id.naviview);
+        navigationView = findViewById(R.id.naviview);
 
-        naviview.setOnNavigationItemSelectedListener(this);
+        navigationView.setOnNavigationItemSelectedListener(this);
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentPagerAdapter = new FragmentPagerAdapter(mFragmentManager)
@@ -88,10 +91,10 @@ public class MainActivity extends BaseActivity implements
         switch (position)
         {
             case 0:
-                naviview.setSelectedItemId(R.id.navi_home);
+                navigationView.setSelectedItemId(R.id.navi_home);
                 break;
             case 1:
-                naviview.setSelectedItemId(R.id.navi_me);
+                navigationView.setSelectedItemId(R.id.navi_me);
                 break;
         }
     }

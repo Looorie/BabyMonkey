@@ -1,6 +1,5 @@
 package me.looorielovbb.babymonkey.di;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 import me.looorielovbb.babymonkey.BaseFragment;

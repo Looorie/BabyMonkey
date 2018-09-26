@@ -20,7 +20,7 @@ public class RetrofitModule
     {
         return new Retrofit.Builder()
                 .client(client)
-                .baseUrl(BuildConfig.BASE_URL)
+                .baseUrl(Api.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
