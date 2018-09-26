@@ -78,7 +78,7 @@ public class SampleFragment extends BaseFragment implements View.OnClickListener
         switch (v.getId())
         {
             case R.id.textview:
-                api.getGirlsPic("福利", 10, 1)
+                api.getDataByType("福利", 10, 1)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(new Observer<BaseResponse<Resource>>()
