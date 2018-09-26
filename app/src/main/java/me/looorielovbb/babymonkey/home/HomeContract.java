@@ -19,16 +19,13 @@ package me.looorielovbb.babymonkey.home;
 import me.looorielovbb.babymonkey.BasePresenter;
 import me.looorielovbb.babymonkey.BaseView;
 
-public interface HomeContract
-{
+public interface HomeContract {
 
-    interface View extends BaseView<Presenter>
-    {
+    interface View extends BaseView<Presenter> {
 
     }
 
-    interface Presenter extends BasePresenter<View>
-    {
+    interface Presenter extends BasePresenter<View> {
 
     }
 }

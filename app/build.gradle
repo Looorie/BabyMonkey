@@ -65,5 +65,8 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.4.0"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation "com.squareup.retrofit2:converter-gson:2.4.0"
-
+    //leakcanary dependencies
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
 }

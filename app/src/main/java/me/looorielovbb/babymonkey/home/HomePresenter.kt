@@ -14,25 +14,21 @@
  * limitations under the License.
  */
 
-package me.looorielovbb.babymonkey.home;
+package me.looorielovbb.babymonkey.home
 
 
-import me.looorielovbb.babymonkey.di.ActivityScoped;
+import me.looorielovbb.babymonkey.di.ActivityScoped
 
 
 @ActivityScoped
-final class HomePresenter implements HomeContract.Presenter {
+internal class HomePresenter : HomeContract.Presenter {
 
 
-    @Override
-    public void takeView(HomeContract.View view)
-    {
+    override fun takeView(view: HomeContract.View) {
 
     }
 
-    @Override
-    public void dropView()
-    {
+    override fun dropView() {
 
     }
 }
