@@ -16,11 +16,11 @@ import dagger.android.HasFragmentInjector;
 import dagger.android.support.HasSupportFragmentInjector;
 
 @SuppressLint("Registered")
-public class BaseActivity extends AppCompatActivity  implements HasFragmentInjector, HasSupportFragmentInjector
-{
+public class BaseActivity extends AppCompatActivity implements HasFragmentInjector, HasSupportFragmentInjector {
     @Inject
     DispatchingAndroidInjector<Fragment> supportFragmentInjector;
-    @Inject DispatchingAndroidInjector<android.app.Fragment> frameworkFragmentInjector;
+    @Inject
+    DispatchingAndroidInjector<android.app.Fragment> frameworkFragmentInjector;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

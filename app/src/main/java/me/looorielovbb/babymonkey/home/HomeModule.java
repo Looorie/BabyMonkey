@@ -7,8 +7,7 @@ import me.looorielovbb.babymonkey.di.ActivityScoped;
 import me.looorielovbb.babymonkey.di.FragmentScoped;
 
 @Module
-public abstract class HomeModule
-{
+public abstract class HomeModule {
     @FragmentScoped
     @ContributesAndroidInjector
     abstract SampleFragment sampleFragment();

@@ -21,13 +21,11 @@ import me.looorielovbb.babymonkey.network.RetrofitModule;
         ApplicationModule.class,
         ActivityBindingModule.class,
         AndroidSupportInjectionModule.class})
-public interface AppComponent extends AndroidInjector<BabyApp>
-{
+public interface AppComponent extends AndroidInjector<BabyApp> {
 
 
     @Component.Builder
-    interface Builder
-    {
+    interface Builder {
 
         @BindsInstance
         AppComponent.Builder application(Application application);

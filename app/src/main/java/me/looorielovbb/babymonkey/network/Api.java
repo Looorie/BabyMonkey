@@ -3,7 +3,6 @@ package me.looorielovbb.babymonkey.network;
 import io.reactivex.Observable;
 import me.looorielovbb.babymonkey.data.bean.BaseResponse;
 import me.looorielovbb.babymonkey.data.bean.Resource;
-import retrofit2.http.*;
 
 public interface Api {
     String BASE_URL = "https://gank.io/";
